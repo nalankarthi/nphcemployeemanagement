@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "731947e2-83ca-45ff-afe1-3742d11e1856",
+		"name": "nphc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "app",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/ilakkiya/Desktop/userdetails.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/nphc/employee/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nphc",
+						"employee",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "app",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": null,
+							"type": "file",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/nphc/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nphc",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get employee by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "app",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 1003,\n        \"login\": \"pooter\",\n        \"name\": \"Harry Potter\",\n        \"salary\": 1000.0,\n        \"startDate\": \"2021-12-20\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/nphc/employee/1002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nphc",
+						"employee",
+						"1002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "app",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 1003,\n        \"login\": \"pooter\",\n        \"name\": \"Harry Potter\",\n        \"salary\": 1000.0,\n        \"startDate\": \"2021-12-20\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/nphc/employee/1002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nphc",
+						"employee",
+						"1002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "app",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": \"e1004\",\n        \"login\": \"Aooter\",\n        \"name\": \"Arry Potter\",\n        \"salary\": 10.00,\n        \"startDate\": \"2021-12-20\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/nphc/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nphc",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "app",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": \"e1004\",\n        \"login\": \"Aooter\",\n        \"name\": \"Arry Harry\",\n        \"salary\": 1050.0,\n        \"startDate\": \"2021-12-20\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/nphc/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nphc",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Employee failed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "app",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/ilakkiya/Desktop/userdetails.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/nphc/employee/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nphc",
+						"employee",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
